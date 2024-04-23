@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner= new Scanner(System.in);
-        int choice=0;
+        int choice=1;
         while (choice!=7){
             System.out.println("***********************************************");
             System.out.println("1.USD>>BRL\n2.BRL>>EUR\n3.EUR>>BRL\n4.BRL>>JPY\n5.BRL>>USD\n6.EUR>>USD\n7.SAIR");
