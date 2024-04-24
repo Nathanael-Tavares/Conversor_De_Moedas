@@ -17,7 +17,7 @@ public class Main {
         try {
             while (choice!=7){
                 System.out.println("***********************************************");
-                System.out.println("1.Dollar Americano>>Real\n2.Real>>Euro\n3.Libra Esterlina>>Real\n4.Real>>Yen\n5.Real>>Dollar Americano\n6.Euro>>Dollar Canadense\n7.SAIR");
+                System.out.println("1.Dollar Americano>>Real\n2.Real>>Peso Argentino\n3.Libra Esterlina>>Real\n4.Real>>Boliviano boliviano\n5.Real>>Dollar Americano\n6.Peso colombiano>>Peso Chileno\n7.SAIR");
                 System.out.println("***********************************************");
                 System.out.print("Escolha uma das opções acima:");
                 choice=scanner.nextInt();
