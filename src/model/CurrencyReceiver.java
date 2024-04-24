@@ -12,20 +12,28 @@ import java.net.http.HttpResponse;
 public class CurrencyReceiver {
 
 
-    public Currency receiver(String brlValue,String base,String target) throws IOException, InterruptedException {
+    public Currency receiver(String brlValue,String base,String target)  {
         Gson gson = new GsonBuilder()
                 .create();
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://v6.exchangerate-api.com/v6/8924ab24410227cf576bfa89/pair/"+base+"/"+target+"/"+brlValue))
                 .build();
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
-        String json = response.body();
+        HttpResponse<String> response = null;
+        try {
+            response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
 
+            String json = response.body();
 
-        Currency currency = gson.fromJson(json, Currency.class);
+            Currency currency = gson.fromJson(json, Currency.class);
 
-        return currency;
+            return currency;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
