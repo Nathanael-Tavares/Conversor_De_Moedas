@@ -30,7 +30,7 @@ public class Main {
                 String brlValue=scanner.next();
                 CurrencyReceiver currencyReceiver=new CurrencyReceiver();
                 Currency currency= currencyReceiver.receiver(brlValue.replace(",","."), pairOfCurrencies[0],pairOfCurrencies[1]);
-                System.out.println("Valor convertido: "+currency.getConversion_result()+"\n");
+                System.out.println("Valor convertido: "+currency.getConversion_result()+" "+pairOfCurrencies[1]+"\n");
 
 
             }
