@@ -11,6 +11,8 @@ Este é um Conversor de Moedas Interativo desenvolvido em Java, que oferece uma 
 1. Conversão de uma moeda para outra.
 2. Listagem das moedas disponíveis.
 3. Suporte a diferentes tipos de moedas.
+4. taxa de cambio em tempo real usan API
+   
 
 
 
